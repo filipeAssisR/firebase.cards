@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="pt-br">
+ 	<head>
+    	<title>Card</title>
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    	
+    	<!-- Bootstrap CSS -->
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    	<link re="stylesheet" href="css/estilo.css">
+    	
+    	<!--<link rel="stylesheet" href="./css/bootstrap.min.css">
+    	<link rel="stylesheet" href="./css/styles.css"> -->
+  	</head>
+  	
+
+  	<body>
+
+  		<div class="container">
+
+  			<h1 id="txtTitulo"></h1>
+
+  		
+  		
+
+		<!-- LOGIN -->
+		<div id="login" class="divPage">
+		
+			<form id="formLogin">
+
+    			<div class="form-group">
+    				<label for="email_login">Email</label>
+    				<input type="text" id="email_login" placeholder="Digite o Email" class="form-control">
+    			</div>
+
+    			<div class="form-group">
+    				<label for="senha_login">Senha</label>
+    				<input type="password" id="senha_login" placeholder="Digite a Senha" class="form-control">
+    			</div>
+
+    			<button type="button" onclick="criarUsuario()" class="btn btn-success">Cadastrar</button>
+    			<button type="button" onclick="login()" class="btn btn-primary">Login</button>
+    			<button type="button" onclick="logarComGitHub()" class="btn btn-dark">Logar com GitHub</button>
+    			<!--<button type="button" onclick="logarComGoogle()" class="btn btn-primary active">Logar com Google</button> -->
+
+    		</form>    	
+
+    	</div>
+
+
+
+    	<div id="cadastrar" class="divPage">
+
+    	<form id="formCadastrar">
+
+    		<div class="form-group">
+    			<label for="foto">Selecione a imagem:</label>
+    			<input type="file" id="foto" class="form-control">
+    			<progress value="0" max="100" id="upload_foto">
+    		</div>
+
+
+    		<div class="form-group">
+    			<label for="descricao">Descreva a imagem:</label>
+    			<textarea class="form-control" id="descricao" aria-describedby="descricao"></textarea> 
+    		</div>
+
+        <div class="form-group">
+          <label for="likes">Likes</label>
+          <input type="number" id="likes" class="form-control">
+        </div>
+
+    		<button type="button" onclick="pageListar()" class="btn btn-default">Cancelar</button>
+    		<button type="button" onclick="cadastrar()" class="btn btn-primary">Salvar</button>
+
+    	</form>
+
+    </div>
+
+
+
+    <div id="listar" class="divPage">
+
+    	<!-- NAVBAR -->
+  		<div>	
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+      			<a class="navbar-brand" href="#">Unifacs</a>
+      			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        			<span class="navbar-toggler-icon"></span>
+      			</button>
+      			<div class="collapse navbar-collapse" id="navbarNav">
+        			<ul class="navbar-nav">
+		        		<li class="nav-item">
+        	    			<button onclick="pageListar()" class="btn btn-outline-info my-2 my-sm-0">Listar</button>
+          				</li>
+          				<li class="nav-item">
+            				<button onclick="pageCadastrar()" class="btn btn-outline-success my-2 my-sm-0">Cadastrar</button>
+          				</li>
+          				<li class="nav-item">
+            				 <button onclick="sair()" class="btn btn-outline-danger my-2 my-sm-0">Sair</button>
+          				</li>
+        			</ul>
+      			</div>
+    		</nav>
+		  </div>
+
+		  <br><br>
+
+
+		  <!-- CARD --> 
+	
+		  <div class="container-fluid row" style="margin:10px" id="divCards"></div>
+    </div>
+
+
+    	
+    </div>
+
+
+  	</body>
+
+
+
+  	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/contatos.js"></script>
+    <script src="js/login.js"></script>
+
+  </html>
